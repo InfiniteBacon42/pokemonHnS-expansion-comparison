@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
@@ -80,7 +80,7 @@
       "flag": "FLAG_HIDE_FAN_CLUB_CLEFAIRY_DOLL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BAYLEEF",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BAYLEEF)",
       "x": 7,
       "y": 6,
       "elevation": 0,
@@ -102,10 +102,6 @@
       "dest_warp_id": "3"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

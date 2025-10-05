@@ -26,9 +26,7 @@ SlateportCity_Mart_EventScript_Clerk2::
 SlateportCity_Mart_Pokemart:
 	.2byte ITEM_HARBOR_MAIL
 	.2byte ITEM_EXP_SHARE_SMALL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 SlateportCity_Mart_EventScript_ClerkNoExp::
 	pokemart SlateportCity_Mart_PokemartNoExp
@@ -39,9 +37,7 @@ SlateportCity_Mart_EventScript_ClerkNoExp::
 	.align 2
 SlateportCity_Mart_PokemartNoExp:
 	.2byte ITEM_HARBOR_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 SlateportCity_Mart_EventScript_BlackBelt::
 	msgbox SlateportCity_Mart_Text_SomeItemsOnlyAtMart, MSGBOX_NPC
