@@ -49,7 +49,7 @@ DragonsDen_Cavern_Trigger_ClairMid::
 	playse SE_PIN
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
 	delay 60
-	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight1
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight
 	call DragonsDen_Cavern_EventScript_Clair
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, DragonsDen_Cavern_Movement_ClairLeaveMid
 	waitmovement 0
@@ -65,9 +65,9 @@ DragonsDen_Cavern_Trigger_ClairRight::
 	playse SE_PIN
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
 	delay 60
-	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight1
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight1
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight
 	call DragonsDen_Cavern_EventScript_Clair
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, DragonsDen_Cavern_Movement_ClairLeaveRight
 	waitmovement 0
@@ -80,7 +80,7 @@ DragonsDen_Cavern_Trigger_ClairRight::
 
 
 DragonsDen_Cavern_EventScript_Clair::
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	msgbox DragonsDen_Cavern_Text_ClairGiveDragonclaw, MSGBOX_DEFAULT
 	giveitem ITEM_TM_DRAGON_CLAW
 	msgbox DragonsDen_Cavern_Text_ClairDescribeDragonclaw, MSGBOX_DEFAULT

@@ -751,7 +751,7 @@ BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc::
 	.string "critical-hit rate.$"
 
 EventScript_DoWonderTrade::
-	goto_if_set FLAG_UNLIMITIED_WONDERTRADE, EventScript_DoWonderTradeStartNoLimit
+	goto_if_set FLAG_UNLIMITED_WONDERTRADE, EventScript_DoWonderTradeStartNoLimit
 	goto_if_unset FLAG_WONDERTRADE_FIRSTIME, EventScript_FirstTimeWonderRandomizer
 	special CheckIfRandomizerIsActive
 	goto_if_unset FLAG_WT_ENABLED_RANDOMIZER, EventScript_DoWonderTradeStart

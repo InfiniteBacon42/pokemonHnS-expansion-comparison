@@ -3,18 +3,18 @@ Route114_LanettesHouse_MapScripts::
 	.byte 0
 
 Route114_LanettesHouse_OnTransition:
-	setflag FLAG_LANDMARK_BillS_HOUSE
+	setflag FLAG_LANDMARK_BILLS_HOUSE
 	end
 
 Route114_LanettesHouse_EventScript_Bill::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_DOLL_Bill, Route114_LanettesHouse_EventScript_OfferAdvice
+	goto_if_set FLAG_RECEIVED_DOLL_BILL, Route114_LanettesHouse_EventScript_OfferAdvice
 	setflag FLAG_SYS_PC_BILL
 	msgbox Route114_LanettesHouse_Text_EverythingClutteredKeepThis, MSGBOX_DEFAULT
 	givedecoration DECOR_LOTAD_DOLL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowNoRoomForDecor
-	setflag FLAG_RECEIVED_DOLL_Bill
+	setflag FLAG_RECEIVED_DOLL_BILL
 	release
 	end
 
@@ -46,7 +46,7 @@ Route114_LanettesHouse_EventScript_PC::
 	end
 
 Route114_LanettesHouse_Text_EverythingClutteredKeepThis:
-	.string "Bill: Oh! {PLAYER}{KUN}!\p"
+	.string "BILL: Oh! {PLAYER}{KUN}!\p"
 	.string "I'm sorry everything is so cluttered…\n"
 	.string "When I get engrossed in research,\l"
 	.string "things end up this way…\p"

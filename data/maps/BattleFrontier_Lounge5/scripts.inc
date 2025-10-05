@@ -51,12 +51,6 @@ BattleFrontier_Lounge5_Text_NatureGirlNoneShown::
 	.string "Boo!\n"
 	.string "Cheapie!$"
 
-BattleFrontier_Lounge5_Text_NatureGirlHardy::
-	.string "Hmhm…\p"
-	.string "This one says it likes to battle!\n"
-	.string "It will battle even if it has a lot\l"
-	.string "of ouchies!$"
-
 BattleFrontier_Lounge5_Text_NatureGirlLonely::
 	.string "Hmhm…\p"
 	.string "This one says it likes to be sneaky!\n"
@@ -87,7 +81,7 @@ BattleFrontier_Lounge5_Text_NatureGirlBold::
 	.string "But if it gets enough ouchies,\l"
 	.string "it will worry about itself!$"
 
-BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky::
+BattleFrontier_Lounge5_Text_NatureGirlHardyDocileNaiveQuietQuirky::
 	.string "Hmhm…\p"
 	.string "This one says it likes to battle!\n"
 	.string "It will battle even if it has a lot\l"

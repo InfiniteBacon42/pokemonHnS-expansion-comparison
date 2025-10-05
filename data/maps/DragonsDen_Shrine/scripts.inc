@@ -19,30 +19,30 @@ DragonsDen_Shrine_EventScript_Elder::
 
 DragonsDen_Shrine_Trigger_ElderQuizLeft::
 	lock
-	applymovement2 OBJ_EVENT_ID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderLeft
+	applymovement2 LOCALID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderLeft
 	applymovement2 OBJ_EVENT_ID_FOLLOWER, DragonsDen_Shrine_Movement_MonWalkToElderLeft
 	waitmovement OBJ_EVENT_ID_FOLLOWER
-	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_PLAYER
 	delay 10
 	lockall
 	goto DragonsDen_Shrine_EventScript_ElderOfferQuiz
 
 DragonsDen_Shrine_Trigger_ElderQuizTop::
 	lock
-	applymovement2 OBJ_EVENT_ID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderTop
+	applymovement2 LOCALID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderTop
 	applymovement2 OBJ_EVENT_ID_FOLLOWER, DragonsDen_Shrine_Movement_PlayerWalkToElderTop
 	waitmovement OBJ_EVENT_ID_FOLLOWER
-	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_PLAYER
 	delay 10
 	lockall
 	goto DragonsDen_Shrine_EventScript_ElderOfferQuiz
 
 DragonsDen_Shrine_Trigger_ElderQuizRight::
 	lock
-	applymovement2 OBJ_EVENT_ID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderRight
+	applymovement2 LOCALID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderRight
 	applymovement2 OBJ_EVENT_ID_FOLLOWER, DragonsDen_Shrine_Movement_MonWalkToElderRight
 	waitmovement OBJ_EVENT_ID_FOLLOWER
-	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_PLAYER
 	delay 10
 	lockall
 	goto DragonsDen_Shrine_EventScript_ElderOfferQuiz
@@ -231,14 +231,14 @@ DragonsDen_Shrine_EventScript_ClairEnter::
 	playse SE_DOOR
 	delay 40
 	playse SE_PIN
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	delay 20
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_SOUTH
 	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairEnter
 	waitmovement 0
 	turnobject LOCALID_DRAGONSDEN3_ELDER, DIR_WEST	
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	msgbox DragonsDen_Shrine_Text_ClairYouPassed, MSGBOX_DEFAULT
 	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairBackup1
@@ -268,7 +268,7 @@ DragonsDen_Shrine_EventScript_ClairEnter::
 
 	applymovement2 LOCALID_DRAGONSDEN3_ELDER, DragonsDen_Shrine_Movement_ElderReturnToPlayer
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	turnobject LOCALID_DRAGONSDEN3_CLAIR, DIR_NORTH
 	msgbox DragonsDen_Shrine_Text_ElderScoldsClair, MSGBOX_DEFAULT
 	closemessage

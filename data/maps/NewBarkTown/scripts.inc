@@ -4,7 +4,6 @@
 NewBarkTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewBarkTown_OnFrame
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
 NewBarkTown_OnFrame::
@@ -29,12 +28,10 @@ NewBarkTown_OnTransition::
 NewBarkTown_Set_TalkToElm::
 	clearflag FLAG_HIDE_SILVER_NEWBARKTOWN
 	setobjectxyperm LOCALID_LASS, 0, 11
-	callnative SetTimeBasedEncounters
 	end
 
 NewBarkTown_Set_TalkToMom::
 	setobjectxyperm LOCALID_LASS, 0, 11
-	callnative SetTimeBasedEncounters
 	end
 
 NewBarkTown_EventScript_LabSign::
@@ -100,7 +97,7 @@ NewBarkTown_EventScript_LeaveTrigger::
 	lock
 	call_if_eq VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_EventScript_LeaveTriggersState2
 	call_if_eq VAR_NEWBARK_TOWN_STATE, 4, NewBarkTown_EventScript_LeaveTriggersState4
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_PlayerStepBack
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerStepBack
 	waitmovement 0
 	release
 	end
@@ -153,7 +150,7 @@ NewBarkTown_EventScript_Silver::
 	msgbox NewBarkTown_Text_Silver2, MSGBOX_DEFAULT
 	playse SE_BANG
 	applymovement LOCALID_SILVER, NewBarkTown_Movement_SilverPushesPlayer
-	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Movement_PlayerPushedBySilver
+	applymovement LOCALID_PLAYER, NewBarkTown_Movement_PlayerPushedBySilver
 	waitmovement 0
 	applymovement LOCALID_SILVER, Common_Movement_FaceOriginalDirection
 	waitmovement 0

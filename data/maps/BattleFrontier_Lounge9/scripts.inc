@@ -2,8 +2,8 @@ BattleFrontier_Lounge9_MapScripts::
 	.byte 0
 
 BattleFrontier_Lounge9_Heal::
-	specialvar VAR_RESULT, IsPokecenterChallengeActivated
-	goto_if_eq VAR_RESULT, TRUE, SSTidalRooms_EventScript_Bed_PokecenterChallenge
+	@specialvar VAR_RESULT, IsPokecenterChallengeActivated
+	@goto_if_eq VAR_RESULT, TRUE, SSTidalRooms_EventScript_Bed_PokecenterChallenge
 	msgbox BattleFrontier_Lounge9_Heal_TEXT, MSGBOX_NPC
 	waitmessage
 	fadescreen 0x1
@@ -559,7 +559,7 @@ BattleFrontier_Lounge9_Chansey5::
 	case MULTI_B_PRESSED, BattleFrontier_Lounge9_Chansey1End
 
 BattleFrontier_Lounge9_Chansey5Battle::
-	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_CHANSEY5, 0, BattleFrontier_Lounge9_Chansey5Intro, BattleFrontier_Lounge9_Chansey5Defeat, BattleFrontier_Lounge9_ChanseyBattleAgain
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_CHANSEY5, 0, BattleFrontier_Lounge9_Chansey5Intro, BattleFrontier_Lounge9_Chansey5Defeat, BattleFrontier_Lounge9_ChanseyBattleAgain, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE
 	end
 
 BattleFrontier_Lounge9_Chansey1End::

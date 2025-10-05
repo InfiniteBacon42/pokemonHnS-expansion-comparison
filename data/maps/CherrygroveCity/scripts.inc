@@ -2,13 +2,7 @@
 .set LOCALID_CHERRYGROVE_SILVER, 14
 
 CherrygroveCity_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, CherryGroveCity_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
-
-CherryGroveCity_OnTransition::
-	callnative SetTimeBasedEncounters
-	end
 
 CherryGroveCity_EventScript_TriggerGent_Top::
 	lock
@@ -17,13 +11,13 @@ CherryGroveCity_EventScript_TriggerGent_Top::
 	playse SE_PIN
 	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
 	delay 60
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	msgbox CherrygroveCity_Text_GuideGentIntro, MSGBOX_YESNO
 	waitmessage
 	goto_if_eq VAR_RESULT, NO, CherryGroveCity_EventScript_TriggerGent_Cancel
 	msgbox CherrygroveCity_Text_GuideGentTourStart, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Top
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Trigger_Top
 	waitmovement 0 
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
 	waitmovement 0 
@@ -38,7 +32,7 @@ CherryGroveCity_EventScript_TriggerGent_Mid::
 	playse SE_PIN
 	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
 	delay 60
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	msgbox CherrygroveCity_Text_GuideGentIntro, MSGBOX_YESNO
 	waitmessage
 	goto_if_eq VAR_RESULT, NO, CherryGroveCity_EventScript_TriggerGent_Cancel
@@ -46,7 +40,7 @@ CherryGroveCity_EventScript_TriggerGent_Mid::
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
 	waitmovement 0 
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	goto CherryGroveCity_EventScript_GentTour
 	release
 	end
@@ -58,7 +52,7 @@ CherryGroveCity_EventScript_TriggerGent_Bottom::
 	playse SE_PIN
 	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
 	delay 60
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	msgbox CherrygroveCity_Text_GuideGentIntro, MSGBOX_YESNO
 	waitmessage
 	goto_if_eq VAR_RESULT, NO, CherryGroveCity_EventScript_TriggerGent_Cancel
@@ -66,7 +60,7 @@ CherryGroveCity_EventScript_TriggerGent_Bottom::
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
 	waitmovement 0 
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Bottom
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Trigger_Bottom
 	waitmovement 0 
 	goto CherryGroveCity_EventScript_GentTour
 	release
@@ -82,31 +76,31 @@ CherryGroveCity_EventScript_TriggerGent_Cancel::
 CherryGroveCity_EventScript_GentTour::
 	playbgm MUS_HG_FOLLOW_ME_1, FALSE
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Pokecenter
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Pokecenter
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Pokecenter
 	waitmovement 0
 	waitmovement 0
 	msgbox CherrygroveCity_Text_GuideGentPokecenter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Pokemart
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Pokemart
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Pokemart
 	waitmovement 0
 	waitmovement 0
 	msgbox CherrygroveCity_Text_GuideGentMart, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Route30
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Route30
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Route30
 	waitmovement 0
 	waitmovement 0
 	msgbox CherrygroveCity_Text_GuideGentRoute30, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Sea
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Sea
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Sea
 	waitmovement 0
 	waitmovement 0
 	msgbox CherrygroveCity_Text_GuideGentSea, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_House_Gent
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_House_Player
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_House_Player
 	waitmovement 0
 	waitmovement 0
 	delay 20
@@ -114,7 +108,7 @@ CherryGroveCity_EventScript_GentTour::
 	closemessage
 
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Gent_Leave
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	delay 20
 	opendoor 42, 14
 	waitdooranim
@@ -211,14 +205,14 @@ CherryGroveCity_EventScript_Sign::
 
 CherryGroveCity_EventScript_TriggerSilver_Top::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Silver_Top
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Trigger_Silver_Top
 	waitmovement 0
 	goto CherryGroveCity_EventScript_TriggerSilver
 	end
 
 CherryGroveCity_EventScript_TriggerSilver_Bottom::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Silver_Bottom
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Trigger_Silver_Bottom
 	waitmovement 0
 	goto CherryGroveCity_EventScript_TriggerSilver
 	end
@@ -252,7 +246,7 @@ CherryGroveCity_Silver_AfterBattle::
 	playbgm MUS_HG_RIVAL_EXIT, TRUE
 	msgbox CherrygroveCity_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Silver_Leave1Player
+	applymovement LOCALID_PLAYER, CherryGroveCity_Movement_Silver_Leave1Player
 	applymovement LOCALID_CHERRYGROVE_SILVER, CherryGroveCity_Movement_Silver_Leave1
 	waitmovement 0
 	waitmovement 0

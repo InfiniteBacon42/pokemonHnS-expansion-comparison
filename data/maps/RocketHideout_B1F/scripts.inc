@@ -63,7 +63,7 @@ RocketHideout_B1F_EventScript_SpawnGruntRight::
 	return
 
 RocketHideout_B1F_EventScript_HeightAdjust::
-	applymovement VAR_TEMP_0, Common_Movement_WalkDown1
+	applymovement VAR_TEMP_0, Common_Movement_WalkDown
 	waitmovement 0
 	return
 
@@ -175,14 +175,14 @@ RocketHideout_B1F_Trigger_Statue5::
 
 RocketHideout_B1F_Trigger_StatueGruntLeft::
 	playse SE_WARP_IN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
 	call_if_eq VAR_TEMP_2, 4, RocketHideout_B1F_EventScript_HeightAdjust
 	call_if_eq VAR_TEMP_2, 9, RocketHideout_B1F_EventScript_HeightAdjust
 	call_if_eq VAR_TEMP_2, 22, RocketHideout_B1F_EventScript_HeightAdjust
 	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkRight
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	msgbox RocketHideout_B1F_Text_CameraGrunt1Seen, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_17, RocketHideout_B1F_Text_CameraGrunt1Beaten
 	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkLeft
@@ -202,14 +202,14 @@ RocketHideout_B1F_Trigger_StatueGruntLeft::
 
 RocketHideout_B1F_Trigger_StatueGruntRight::
 	playse SE_WARP_IN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
 	call_if_eq VAR_TEMP_2, 4, RocketHideout_B1F_EventScript_HeightAdjust
 	call_if_eq VAR_TEMP_2, 9, RocketHideout_B1F_EventScript_HeightAdjust
 	call_if_eq VAR_TEMP_2, 22, RocketHideout_B1F_EventScript_HeightAdjust
 	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkLeft
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	msgbox RocketHideout_B1F_Text_CameraGrunt1Seen, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_17, RocketHideout_B1F_Text_CameraGrunt1Beaten
 	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkRight

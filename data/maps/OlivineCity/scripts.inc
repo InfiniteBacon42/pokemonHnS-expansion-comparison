@@ -51,7 +51,7 @@ OlivineCity_EventScript_CityTrigger:: @FLAGHEAP
 	clearflag FLAG_HIDE_LIGHTHOUSE_JASMINE
 	clearflag FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
 	setvar VAR_GETFLY, 0
-	
+
 	setvar VAR_OLIVINE_CITY_STATE, 1
 
 	@cianwood flags
@@ -103,12 +103,12 @@ OlivineCity_EventScript_SilverWalkToPlayer3::
 	return
 
 OlivineCity_EventScript_SilverLeaveAdjust1::
-	applymovement LOCALID_OLIVINE_SILVER Common_Movement_WalkDown1
+	applymovement LOCALID_OLIVINE_SILVER Common_Movement_WalkDown
 	waitmovement 0
 	return
 
 OlivineCity_EventScript_SilverLeaveAdjust2::
-	applymovement LOCALID_OLIVINE_SILVER Common_Movement_WalkUp1
+	applymovement LOCALID_OLIVINE_SILVER Common_Movement_WalkUp
 	waitmovement 0
 	return
 

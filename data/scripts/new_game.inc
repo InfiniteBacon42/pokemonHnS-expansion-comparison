@@ -1,3 +1,5 @@
+@ HnS PORT TODO - should ResetAllBerries be removed?
+
 EventScript_ResetAllBerries::
 	@ Route 102
 	setberrytree BERRY_TREE_ROUTE_102_ORAN,  ITEM_TO_BERRY(ITEM_ORAN_BERRY),  BERRY_STAGE_BERRIES
@@ -155,6 +157,7 @@ EventScript_ResetAllBerries::
 	setberrytree BERRY_TREE_TAMATO_3, ITEM_TO_BERRY(ITEM_TAMATO_BERRY), BERRY_STAGE_BERRIES
 	return
 
+@ HnS PORT NOTE - Should now be 1:1 w/ HnS Modern, but maybe could be handled better?
 EventScript_ResetAllMapFlags::
 	@HnS FLAGHEAP1
 
@@ -282,6 +285,7 @@ EventScript_ResetAllMapFlags::
 	setvar VAR_UNUSED_HNS_VAR7, 0
 
 	additem ITEM_EXP_SHARE
+	setflag FLAG_EXP_SHARE
 
 	call EventScript_ResetAllBerries
 	end

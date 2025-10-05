@@ -1,6 +1,6 @@
 ChangeDeoxysForm::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, ChangeDeoxysForm_Movement
+	applymovement LOCALID_PLAYER, ChangeDeoxysForm_Movement
 	waitmovement 0
 	msgbox ChangeDeoxysForm_Text_Beginning, MSGBOX_YESNO
 	compare VAR_RESULT, YES

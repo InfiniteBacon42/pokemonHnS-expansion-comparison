@@ -14,48 +14,48 @@ Route14_OnTransition:
 Route14_TriggerSuicune_5::
 	lock
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	turnobject LOCALID_PLAYER, DIR_EAST
 	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, Route14_Movement_5
+	applymovement LOCALID_PLAYER, Route14_Movement_5
 	waitmovement 0
 	goto Route14_EventScript_Suicune
 
 Route14_TriggerSuicune_4::
 	lock
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	turnobject LOCALID_PLAYER, DIR_EAST
 	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, Route14_Movement_4
+	applymovement LOCALID_PLAYER, Route14_Movement_4
 	waitmovement 0
 	goto Route14_EventScript_Suicune
 
 Route14_TriggerSuicune_3::
 	lock
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	turnobject LOCALID_PLAYER, DIR_EAST
 	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, Route14_Movement_3
+	applymovement LOCALID_PLAYER, Route14_Movement_3
 	waitmovement 0
 	goto Route14_EventScript_Suicune
 
 Route14_TriggerSuicune_2::
 	lock
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	turnobject LOCALID_PLAYER, DIR_EAST
 	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	goto Route14_EventScript_Suicune
 
 Route14_TriggerSuicune_1::
 	lock
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	turnobject LOCALID_PLAYER, DIR_EAST
 	delay 60
 	goto Route14_EventScript_Suicune
 
@@ -86,7 +86,7 @@ Route14_EventScript_Suicune::
 	waitse
 	playse SE_LEDGE
 	waitse
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	playse SE_LEDGE
 	delay 30
 	playse SE_LEDGE
@@ -102,7 +102,7 @@ Route14_EventScript_Suicune::
 	addobject LOCALID_ROUTE14_EUSINE
 	applymovement LOCALID_ROUTE14_EUSINE, Route14_Movement_EusineEnter
 	delay 60
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	waitmovement 0
 	msgbox Route14_Text_Eusine, MSGBOX_DEFAULT
 	closemessage
@@ -263,7 +263,7 @@ Route14_EventScript_PidgeottoDislikedBerry::
 
 Route14_EventScript_PidgeottoBlowPlayerLeft::
 	applymovement LOCALID_ROUTE14_PIDGEOTTO, Route14_Movement_JumpLeft
-	applymovement OBJ_EVENT_ID_PLAYER, Route14_Movement_Player_BlownLeft
+	applymovement LOCALID_PLAYER, Route14_Movement_Player_BlownLeft
 	waitmovement 0
 	return
 

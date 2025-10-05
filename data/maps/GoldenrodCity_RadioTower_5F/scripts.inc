@@ -182,7 +182,7 @@ GoldenrodCity_RadioTower_5F_EventScript_Archer::
 GoldenrodCity_RadioTower_5F_EventScript_WingTop::
 	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerTop
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_LUGIA_OR_HOOH, 1,  GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
@@ -195,7 +195,7 @@ GoldenrodCity_RadioTower_5F_EventScript_WingTop::
 GoldenrodCity_RadioTower_5F_EventScript_WingMid::
 	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerMid
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_LUGIA_OR_HOOH, 1,  GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
@@ -208,7 +208,7 @@ GoldenrodCity_RadioTower_5F_EventScript_WingMid::
 GoldenrodCity_RadioTower_5F_EventScript_WingBot::
 	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerBot
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_LUGIA_OR_HOOH, 1,  GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing

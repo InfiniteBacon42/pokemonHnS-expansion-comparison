@@ -190,11 +190,11 @@ IlexForest_EventScript_Farfetchd_Done::
 
 IlexForest_EventScript_TriggerBot::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER Common_Movement_WalkUp
+	applymovement LOCALID_PLAYER Common_Movement_WalkUp
 	waitmovement 0
 IlexForest_EventScript_Trigger::
 	lock
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	msgbox IlexForest_Text_CharcoalMasterIntro, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_HM_CUT
@@ -225,48 +225,6 @@ IlexForest_EventScript_BugcatcherWayne::
 	msgbox IlexForest_Text_BugCatcherWayneAfter, MSGBOX_AUTOCLOSE
 	end
 
-IlexForest_EventScript_HeadbuttMoveTutor::
-	lock
-	faceplayer
-	goto_if_set FLAG_FINITE_TMS, IlexForest_EventScript_HeadbuttTutorFinite
-	clearflag FLAG_MOVE_TUTOR_TAUGHT_HEADBUTT
-	msgbox MoveTutor_Text_HeadbuttTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_HeadbuttDeclined
-	msgbox MoveTutor_Text_HeadbuttWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_HEADBUTT
-	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_HeadbuttDeclined
-	goto MoveTutor_EventScript_HeadbuttTaught
-	end
-
-IlexForest_EventScript_HeadbuttTutorFinite::
-	lock
-	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_HEADBUTT, MoveTutor_EventScript_HeadbuttTaught
-	msgbox MoveTutor_Text_HeadbuttTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_HeadbuttDeclined
-	call MoveTutor_EventScript_CanOnlyBeLearnedOnceFinite
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_HeadbuttDeclined
-	msgbox MoveTutor_Text_HeadbuttWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_HEADBUTT
-	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_HeadbuttDeclined
-	setflag FLAG_MOVE_TUTOR_TAUGHT_HEADBUTT
-	goto MoveTutor_EventScript_HeadbuttTaught
-	end
-
-MoveTutor_EventScript_HeadbuttDeclined::
-	msgbox MoveTutor_Text_HeadbuttDeclined, MSGBOX_DEFAULT
-	release
-	end
-
-MoveTutor_EventScript_HeadbuttTaught::
-	setflag FLAG_GET_HEADBUTT
-	msgbox MoveTutor_Text_HeadbuttTaught, MSGBOX_DEFAULT
-	release
-	end
-
-
 IlexForest_EventScript_Shrine::
 	lock
 	goto_if_eq VAR_AZALEA_TOWN_STATE, 9, IlexForest_EventScript_Celebi_Event
@@ -286,18 +244,18 @@ IlexForest_EventScript_Celebi_Event::
 	waitmovement 0
 	playse SE_M_PETAL_DANCE
 	applymovement LOCALID_ILEX_FOREST_CELEBI, IlexForest_Movement_Celebi2
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	waitmovement 0
 	playse SE_M_PETAL_DANCE
 	applymovement LOCALID_ILEX_FOREST_CELEBI, IlexForest_Movement_Celebi3
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
 	seteventmon SPECIES_CELEBI, 40
 	special BattleSetup_StartLegendaryBattle
-waitstate
+	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
 	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, IlexForest_EventScript_Shrine_Caught
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -309,7 +267,7 @@ IlexForest_EventScript_Kurt::
 	addobject LOCALID_ILEX_FOREST_KURT
 	applymovement LOCALID_ILEX_FOREST_KURT, IlexForest_Movement_Kurt1
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	msgbox IlexForest_Text_KurtCaughtCelebi, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ILEX_FOREST_KURT, IlexForest_Movement_Kurt2
@@ -338,7 +296,7 @@ IlexForest_EventScript_SecondCelebi::
 	waitmoncry
 	seteventmon SPECIES_CELEBI, 40
 	special BattleSetup_StartLegendaryBattle
-waitstate
+	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, IlexForest_EventScript_SecondCelebiRan
 	fadescreenswapbuffers FADE_TO_BLACK

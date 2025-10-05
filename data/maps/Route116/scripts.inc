@@ -1,15 +1,10 @@
-.set LOCALID_BRINEY, 11
-.set LOCALID_WANDAS_BF_OUTSIDE, 21
-
 Route116_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route116_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, Route116_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route116_OnFrame
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
 Route116_OnTransition:
-	callnative SetTimeBasedEncounters
 	call_if_set FLAG_RECOVERED_DEVON_GOODS, Route116_EventScript_SetWandasBoyfriendPos
 	call_if_eq VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_HideMapNamePopup
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_116_NORTH, AbnormalWeather_StartGroudonWeather
@@ -27,7 +22,7 @@ Route116_RoseradeEvo_Text:
 	.string "That's how my ROSELIA evolved!$"
 
 Route116_EventScript_SetWandasBoyfriendPos::
-	setobjectxyperm LOCALID_WANDAS_BF_OUTSIDE, 38, 10
+	setobjectxyperm LOCALID_ROUTE116_WANDAS_BF, 38, 10
 	return
 
 Route116_OnLoad:
@@ -156,8 +151,8 @@ Route116_EventScript_Briney::
 
 Route116_EventScript_BrineyTrigger::
 	lockall
-	applymovement LOCALID_BRINEY, Common_Movement_WalkInPlaceFasterRight
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_ROUTE116_BRINEY, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox Route116_Text_ScoundrelMadeOffWithPeeko, MSGBOX_DEFAULT
 	setvar VAR_GARBAGEVAR, 2

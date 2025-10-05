@@ -109,6 +109,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE104_BOAT",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
       "x": 12,
       "y": 54,
@@ -122,6 +123,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_ROUTE104_BRINEY",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
       "x": 12,
       "y": 51,
@@ -299,9 +301,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_ItemPPUp",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "trainer_sight_or_berry_tree_id": "ITEM_PP_UP",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WORKER_F",
@@ -377,9 +379,9 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_ItemPokeBall",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "trainer_sight_or_berry_tree_id": "ITEM_POKE_BALL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
@@ -403,9 +405,9 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_ItemXAccuracy",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "trainer_sight_or_berry_tree_id": "ITEM_X_ACCURACY",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -429,9 +431,9 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_ItemPotion",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY",
@@ -460,6 +462,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE104_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 17,
       "y": 50,

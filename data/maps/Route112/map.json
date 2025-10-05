@@ -31,6 +31,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_ROUTE112_GRUNT_1",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
       "x": 26,
       "y": 30,
@@ -96,6 +97,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE112_GRUNT_2",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
       "x": 27,
       "y": 30,
@@ -182,9 +184,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route112_EventScript_ItemNugget",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "trainer_sight_or_berry_tree_id": "ITEM_NUGGET",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
@@ -270,9 +272,7 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

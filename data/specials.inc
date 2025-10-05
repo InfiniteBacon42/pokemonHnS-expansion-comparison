@@ -1,9 +1,16 @@
-.macro def_special ptr
+@ 'requests_effects' should be set to 1 if the special contains a call
+@ to 'Script_RequestEffects', which allows it to be analyzed with
+@ 'RunScriptImmediatelyUntilEffect'.
+.macro def_special ptr:req, requests_effects=0
 .global SPECIAL_\ptr
 .set SPECIAL_\ptr, __special__
 .set __special__, __special__ + 1
+	.if \requests_effects == 0
 	.4byte \ptr
-	.endm
+	.else
+	.4byte \ptr + ROM_SIZE
+	.endif
+.endm
 
 .set __special__, 0
 		.align 2
@@ -142,13 +149,13 @@ gSpecials::
 	def_special BufferDeepLinkPhrase
 	def_special GetDewfordHallPaintingNameIndex
 	def_special SwapRegisteredBike
-	def_special CalculatePlayerPartyCount 		@ tx_randomizer_and_challenges
-	def_special GetMaxPartySize 					@ tx_randomizer_and_challenges
-	def_special IsPokecenterChallengeActivated 	@ tx_randomizer_and_challenges
-	def_special IsNuzlockeNicknamingActive		@ tx_randomizer_and_challenges
-	def_special IsRandomItemsActivated 			@ tx_randomizer_and_challenges
-	def_special RandomItem						@ tx_randomizer_and_challenges
-	def_special RandomItemHidden				@ tx_randomizer_and_challenges
+	def_special CalculatePlayerPartyCount
+	def_special GetMaxPartySize 				@ tx_randomizer_and_challenges
+	@def_special IsPokecenterChallengeActivated @ tx_randomizer_and_challenges
+	@def_special IsNuzlockeNicknamingActive		@ tx_randomizer_and_challenges
+	@def_special IsRandomItemsActivated 		@ tx_randomizer_and_challenges
+	@def_special RandomItem						@ tx_randomizer_and_challenges
+	@def_special RandomItemHidden				@ tx_randomizer_and_challenges
 	def_special CountPartyNonEggMons
 	def_special CountPartyAliveNonEggMons_IgnoreVar0x8004Slot
 	def_special ShouldReadyContestArtist
@@ -303,7 +310,7 @@ gSpecials::
 	def_special WaitWeather
 	def_special BufferEReaderTrainerName
 	def_special GetSlotMachineId
-	def_special GetPlayerFacingDirection
+	def_special GetPlayerFacingDirection, requests_effects=TRUE
 	def_special FoundAbandonedShipRoom1Key
 	def_special FoundAbandonedShipRoom2Key
 	def_special FoundAbandonedShipRoom4Key
@@ -554,20 +561,20 @@ gSpecials::
 	def_special SetSpdIvs
 	def_special SetSpAtkIvs
 	def_special SetSpDefIvs
-	def_special CreateWonderTradePokemon
+	@ def_special CreateWonderTradePokemon
 	def_special TryChangeDeoxysForm
 	def_special CheckPkm
 	def_special ChooseItemFromBag
 	def_special ForceSaveGame
-	def_special CheckIfChallengesAreActive
-	def_special CheckIfRandomizerIsActive
+	@ def_special CheckIfChallengesAreActive
+	@ def_special CheckIfRandomizerIsActive
 	def_special SetHpStat
 	def_special SetAtkStat
 	def_special SetDefStat
 	def_special SetSpdStat
 	def_special SetSpAtkStat
 	def_special SetSpDefStat
-	def_special BufferUnitSystemText
+	@ def_special BufferUnitSystemText
 	def_special CheckHooh
 	def_special CheckAerodactyl
 	def_special CheckKabuto
@@ -584,3 +591,25 @@ gSpecials::
 	def_special ShowBugContestChosenMon
 	def_special DoPokemonLeagueLightingEffect
 	def_special SetVermilionTrashCans
+	def_special TrySpecialOverworldEvo
+	def_special GetNumberSprayStrength
+	def_special GetSprayId
+	def_special GetLastUsedSprayType
+	def_special TrySkyBattle
+	def_special VsSeekerResetObjectMovementAfterChargeComplete
+	def_special VsSeekerFreezeObjectsAfterChargeComplete
+	def_special PlayerHasMulch
+	def_special Bag_ChooseMulch
+	def_special ObjectEventInteractionApplyMulch
+	def_special ObjectEventInteractionPullBerryWeed
+	def_special ObjectEventInteractionClearBerryPests
+	def_special ObjectEventInteractionBerryHasWeed
+	def_special ObjectEventInteractionBerryHasPests
+	def_special CanWaterBerryPlot
+	def_special Script_GetChosenMonOffensiveEVs
+	def_special Script_GetChosenMonDefensiveEVs
+	def_special Script_GetChosenMonOffensiveIVs
+	def_special Script_GetChosenMonDefensiveIVs
+	def_special UseBlankMessageToCancelPokemonPic
+	def_special EnterCode
+	def_special GetCodeFeedback

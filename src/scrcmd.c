@@ -2592,7 +2592,6 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
         EC_WORD_TIME,
         EC_WORD_TAKE,
         EC_WORD_THIS,
-
         EC_WORD_POKEMON,
         EC_WORD_DON_T,
         EC_WORD_LOSE,

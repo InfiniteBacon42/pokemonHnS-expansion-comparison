@@ -26,6 +26,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_ROUTE109_BOAT",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
       "x": 21,
       "y": 26,
@@ -39,6 +40,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_ROUTE109_BRINEY",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
       "x": 21,
       "y": 24,
@@ -151,9 +153,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route109_EventScript_ItemPPUp",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "trainer_sight_or_berry_tree_id": "ITEM_PP_UP",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ENGINEER",
@@ -273,7 +275,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZIGZAGOON",
+      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_2",
       "x": 32,
       "y": 6,
       "elevation": 3,
@@ -320,9 +322,9 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route109_EventScript_ItemPotion",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
@@ -347,9 +349,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

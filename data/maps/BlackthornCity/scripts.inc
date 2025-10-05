@@ -5,7 +5,6 @@ BlackthornCity_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BlackthornCity_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, BlackthornCity_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, BlackthornCity_EventScript_CityEnter
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
 BlackthornCity_OnLoad::
@@ -22,9 +21,8 @@ BlackthornCity_OnFrame::
 	map_script_2 VAR_BLACKTHORN_CITY_STATE, 4, BlackthornCity_EventScript_Call
 	.2byte 0
 
-BlackthornCity_EventScript_CityEnter:: 
+BlackthornCity_EventScript_CityEnter::
 	setflag FLAG_VISITED_BLACKTHORN_CITY
-	callnative SetTimeBasedEncounters
 	end
 
 BlackthornCity_EventScript_Call::
@@ -70,7 +68,7 @@ BlackThornCity_Trigger_Sage::
 	turnobject LOCALID_BLACKTHORN_SAGE, DIR_EAST
 	msgbox BlackthornGrampsRefusesEntryText, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER Common_Movement_WalkDown
 	waitmovement 0
 	turnobject LOCALID_BLACKTHORN_SAGE, DIR_SOUTH
 	release

@@ -2,13 +2,7 @@
 .set LOCALID_ECRUTEK_SILVER, 33
 
 EcruteakCity_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
-
-EcruteakCity_OnTransition::
-	callnative SetTimeBasedEncounters
-	end
 
 EcruteakCity_Test_Lugia::
 	setvar VAR_LUGIA_OR_HOOH, 1
@@ -71,12 +65,12 @@ EcruteakCity_Trigger_Silver::
 	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
 	playse SE_BANG
 	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver1
-	applymovement OBJ_EVENT_ID_PLAYER, EcruteakCity_Movement_Silver1
+	applymovement LOCALID_PLAYER, EcruteakCity_Movement_Silver1
 	message EcruteakCity_Text_Silver1
 	
-	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_PLAYER
 	waitmovement LOCALID_ECRUTEK_SILVER
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	closedoor 39, 40
 	waitdooranim
 	msgbox EcruteakCity_Text_Silver2, MSGBOX_DEFAULT

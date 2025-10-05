@@ -31,7 +31,7 @@ OlivineCity_Gym_TriggerRow1::
 	call_if_eq VAR_TEMP_1, 8, OlivineCity_Gym_EventScript_MoveLeft2
 	call_if_eq VAR_TEMP_1, 9, OlivineCity_Gym_EventScript_MoveLeft1
 	call_if_eq VAR_TEMP_1, 10, OlivineCity_Gym_EventScript_MoveLeft0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	msgbox OlivineCity_Gym_Text_Gent, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_OLIVINE_CITY_STATE, 6
@@ -43,34 +43,34 @@ OlivineCity_Gym_EventScript_MoveLeft0::
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft1::
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft2::
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft3::
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft4::
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, Common_Movement_WalkLeft
 	waitmovement 0
 	return
 
@@ -114,7 +114,7 @@ OlivineCity_Gym_TriggerRow2::
 	call_if_eq VAR_TEMP_1, 8, OlivineCity_Gym_EventScript_MoveRight2
 	call_if_eq VAR_TEMP_1, 9, OlivineCity_Gym_EventScript_MoveRight3
 	call_if_eq VAR_TEMP_1, 10, OlivineCity_Gym_EventScript_MoveRight4
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	msgbox OlivineCity_Gym_Text_Lass, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_OLIVINE_CITY_STATE, 7
@@ -126,34 +126,34 @@ OlivineCity_Gym_EventScript_MoveRight0::
 	return
 
 OlivineCity_Gym_EventScript_MoveRight1::
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveRight2::
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveRight3::
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveRight4::
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement VAR_TEMP_0, Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, Common_Movement_WalkRight
 	waitmovement 0
 	return
 

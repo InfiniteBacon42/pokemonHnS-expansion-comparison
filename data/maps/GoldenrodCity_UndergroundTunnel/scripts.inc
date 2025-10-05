@@ -20,7 +20,7 @@ GoldenrodCity_UndergroundTunnel_EventScript_KimonoTriggerBot::
 	delay 60
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono2, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, Common_Movement_WalkUp1
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave1
 	waitmovement 0
@@ -47,7 +47,7 @@ GoldenrodCity_UndergroundTunnel_EventScript_KimonoTriggerTop::
 	delay 60
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono2, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, Common_Movement_WalkDown1
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave1
 	waitmovement 0

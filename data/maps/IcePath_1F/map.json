@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -23,8 +23,8 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "IcePath_1F_EventScript_Item_PpUp",
+      "trainer_sight_or_berry_tree_id": "ITEM_PP_UP",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ICEPATH1_PP_UP"
     },
     {
@@ -36,8 +36,8 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "IcePath_1F_EventScript_Item_HM_Waterfall",
+      "trainer_sight_or_berry_tree_id": "ITEM_HM_WATERFALL",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ICEPATH1_HM_WATERFALL"
     },
     {
@@ -49,12 +49,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "IcePath_1F_EventScript_Item_Protein",
+      "trainer_sight_or_berry_tree_id": "ITEM_PROTEIN",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ICEPATH1_PROTEIN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SWINUB)",
       "x": 28,
       "y": 22,
       "elevation": 0,
@@ -67,7 +67,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GOLBAT",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GOLBAT)",
       "x": 29,
       "y": 15,
       "elevation": 0,
@@ -80,7 +80,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELIBIRD)",
       "x": 28,
       "y": 22,
       "elevation": 0,
@@ -93,7 +93,7 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELIBIRD)",
       "x": 4,
       "y": 6,
       "elevation": 0,
@@ -106,7 +106,7 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SWINUB)",
       "x": 5,
       "y": 8,
       "elevation": 0,
@@ -132,7 +132,7 @@
       "flag": "FLAG_HIDE_ICE_PATH_KIMONO"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SWINUB)",
       "x": 7,
       "y": 9,
       "elevation": 0,
@@ -145,7 +145,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELIBIRD)",
       "x": 7,
       "y": 6,
       "elevation": 0,
@@ -199,7 +199,5 @@
       "script": "IcePath_1F_Trigger_KimonoGirl"
     }
   ],
-  "bg_events": [
-
-  ]
+  "bg_events": []
 }

@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_MIRAGE_ROOT_FOSSIL",
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
       "x": 5,
       "y": 4,
@@ -28,6 +29,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_MIRAGE_CLAW_FOSSIL",
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
       "x": 7,
       "y": 4,
@@ -38,7 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MirageTower_4F_EventScript_ClawFossil",
-      "flag": "FLAG_ITEM_GARBAGEFLAG"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
@@ -76,10 +78,6 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

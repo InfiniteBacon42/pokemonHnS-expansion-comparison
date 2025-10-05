@@ -12,10 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 52,
       "y": 5,
       "elevation": 0,
@@ -23,12 +23,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "WhirlIslands_B1F_EventScript_Item_PP_Max",
+      "trainer_sight_or_berry_tree_id": "ITEM_PP_MAX",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_WHIRL_ISLANDS_B1F_PP_MAX"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 74,
       "y": 37,
       "elevation": 0,
@@ -36,12 +36,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "WhirlIslands_B1F_EventScript_Item_Max_Revive",
+      "trainer_sight_or_berry_tree_id": "ITEM_MAX_REVIVE",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_WHIRL_ISLANDS_B1F_MAX_REVIVE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 51,
       "y": 13,
       "elevation": 0,
@@ -49,12 +49,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "WhirlIslands_B1F_EventScript_Item_Full_Restore",
+      "trainer_sight_or_berry_tree_id": "ITEM_FULL_RESTORE",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_WHIRL_ISLANDS_B1F_FULL_RESTORE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEEL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEEL)",
       "x": 70,
       "y": 12,
       "elevation": 0,
@@ -67,7 +67,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DEWGONG",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DEWGONG)",
       "x": 73,
       "y": 11,
       "elevation": 0,
@@ -80,7 +80,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DEWGONG",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DEWGONG)",
       "x": 42,
       "y": 11,
       "elevation": 0,
@@ -93,7 +93,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEEL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEEL)",
       "x": 44,
       "y": 12,
       "elevation": 0,
@@ -106,7 +106,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KRABBY)",
       "x": 72,
       "y": 28,
       "elevation": 0,
@@ -119,7 +119,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KRABBY)",
       "x": 57,
       "y": 34,
       "elevation": 0,
@@ -132,7 +132,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEEL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEEL)",
       "x": 39,
       "y": 30,
       "elevation": 0,
@@ -145,7 +145,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 73,
       "y": 29,
       "elevation": 0,
@@ -158,7 +158,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HORSEA)",
       "x": 15,
       "y": 21,
       "elevation": 0,
@@ -171,7 +171,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HORSEA)",
       "x": 15,
       "y": 25,
       "elevation": 0,
@@ -184,7 +184,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEADRA)",
       "x": 3,
       "y": 25,
       "elevation": 0,
@@ -197,7 +197,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACRUEL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TENTACRUEL)",
       "x": 53,
       "y": 27,
       "elevation": 0,
@@ -268,10 +268,6 @@
       "dest_warp_id": "12"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

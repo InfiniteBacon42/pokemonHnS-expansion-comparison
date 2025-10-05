@@ -104,7 +104,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 7,
       "y": 8,
       "elevation": 0,
@@ -114,10 +114,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 8,
       "y": 9,
       "elevation": 0,
@@ -127,10 +127,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 9,
       "y": 10,
       "elevation": 0,
@@ -140,10 +140,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 10,
       "y": 11,
       "elevation": 0,
@@ -153,10 +153,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 12,
       "y": 11,
       "elevation": 0,
@@ -166,10 +166,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 14,
       "y": 11,
       "elevation": 0,
@@ -179,10 +179,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 15,
       "y": 10,
       "elevation": 0,
@@ -192,10 +192,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 15,
       "y": 9,
       "elevation": 0,
@@ -205,10 +205,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_WINGULL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WINGULL)",
       "x": 17,
       "y": 59,
       "elevation": 0,
@@ -221,7 +221,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 11,
       "y": 12,
       "elevation": 0,
@@ -231,10 +231,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 16,
       "y": 8,
       "elevation": 0,
@@ -244,10 +244,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KINGLER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KINGLER)",
       "x": 11,
       "y": 10,
       "elevation": 0,
@@ -257,7 +257,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CherryGroveCity_EventScript_Kingler",
-      "flag": "FLAG_DEFEATED_CINNABAR_ISLAND_GYM"
+      "flag": "FLAG_DEFEATED_JOHTO_CINNABAR_GYM"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAGE",
@@ -282,9 +282,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

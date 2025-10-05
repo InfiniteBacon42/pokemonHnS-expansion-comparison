@@ -36,9 +36,7 @@ LilycoveCity_DepartmentStore_2F_EventScript_ClerkLeft::
 @	.2byte ITEM_ICE_HEAL
 @	.2byte ITEM_AWAKENING
 @	.2byte ITEM_FLUFFY_TAIL
-@	.2byte ITEM_NONE
-@	release
-@	end
+@	pokemartlistend
 
 LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight::
 	lock
@@ -66,9 +64,7 @@ LilycoveCity_DepartmentStore_2F_Pokemart2:
     .2byte ITEM_DREAM_MAIL
     .2byte ITEM_FAB_MAIL
     .2byte ITEM_RETRO_MAIL
-	.2byte ITEM_NONE
-	release
-	end
+	pokemartlistend
 
 LilycoveCity_DepartmentStore_2F_Text_LearnToUseItemsProperly:
 	.string "Learn to use items properly.\n"
