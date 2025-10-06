@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
@@ -80,7 +80,7 @@
       "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 54,
       "y": 50,
       "elevation": 0,
@@ -88,12 +88,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "DragonsDen_Cavern_EventScript_Item_PP_Max",
+      "trainer_sight_or_berry_tree_id": "ITEM_PP_MAX",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_DRAGONSDEN2_PP_MAX"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 7,
       "y": 35,
       "elevation": 0,
@@ -101,12 +101,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "DragonsDen_Cavern_EventScript_Item_Max_Potion",
+      "trainer_sight_or_berry_tree_id": "ITEM_MAX_POTION",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_DRAGONSDEN2_MAX_POTION"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 54,
       "y": 28,
       "elevation": 0,
@@ -114,12 +114,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "DragonsDen_Cavern_EventScript_Item_Dragon_Fang",
+      "trainer_sight_or_berry_tree_id": "ITEM_DRAGON_FANG",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_DRAGONSDEN2_DRAGON_FANG"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRATINI",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRATINI)",
       "x": 22,
       "y": 10,
       "elevation": 0,
@@ -132,7 +132,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRATINI",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRATINI)",
       "x": 10,
       "y": 16,
       "elevation": 0,
@@ -145,7 +145,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRATINI",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRATINI)",
       "x": 4,
       "y": 8,
       "elevation": 0,
@@ -158,7 +158,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HORSEA)",
       "x": 44,
       "y": 18,
       "elevation": 0,
@@ -171,7 +171,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRAGONAIR)",
       "x": 27,
       "y": 52,
       "elevation": 0,
@@ -184,7 +184,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEADRA)",
       "x": 37,
       "y": 30,
       "elevation": 0,
@@ -197,7 +197,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRAGONAIR)",
       "x": 22,
       "y": 46,
       "elevation": 0,
@@ -210,7 +210,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEADRA)",
       "x": 39,
       "y": 24,
       "elevation": 0,
@@ -223,7 +223,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRAGONAIR)",
       "x": 18,
       "y": 32,
       "elevation": 0,
@@ -236,7 +236,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRAGONAIR)",
       "x": 13,
       "y": 44,
       "elevation": 0,
@@ -249,7 +249,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEADRA)",
       "x": 56,
       "y": 28,
       "elevation": 0,
@@ -262,7 +262,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEADRA)",
       "x": 46,
       "y": 25,
       "elevation": 0,
@@ -275,7 +275,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HORSEA)",
       "x": 44,
       "y": 16,
       "elevation": 0,
@@ -288,7 +288,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HORSEA)",
       "x": 44,
       "y": 14,
       "elevation": 0,

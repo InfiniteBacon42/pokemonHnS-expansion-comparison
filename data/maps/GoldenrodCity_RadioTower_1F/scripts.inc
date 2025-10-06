@@ -1,6 +1,6 @@
 .set LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, 6
 .set LOCALID_GOLDENROD_RADIOTOWER_GRUNT, 3
-.set LOCALID_LOTTERY_CLERK, 2
+@ .set LOCALID_LOTTERY_CLERK, 2
 
 GoldenrodCity_RadioTower_1F_MapScripts::
 	.byte 0
@@ -135,7 +135,7 @@ RadioTower1F_EventScript_ReceptionGiveRadio::
 	delay 60
 	turnobject LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, DIR_EAST
 	delay 20
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	msgbox RadioTower1F_Text_Whitney2, MSGBOX_DEFAULT
 	closemessage
 	applymovement2 LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, GoldenrodCity_RadioTower_4F_Movement_WhitneyLeave
@@ -446,5 +446,3 @@ GoldenrodCity_RadioTower_1F_Text_PrizeWeveBeenHolding:
 
 GoldenrodCity_RadioTower_1F_Text_PleaseVisitAgain2:
 	.string "Please do visit again.$"
-
-

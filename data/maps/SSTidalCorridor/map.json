@@ -12,9 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_SS_TIDAL_EXIT_SAILOR",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 1,
       "y": 11,
@@ -67,6 +68,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_SS_TIDAL_SCOTT",
       "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
       "x": 9,
       "y": 10,
@@ -145,9 +147,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

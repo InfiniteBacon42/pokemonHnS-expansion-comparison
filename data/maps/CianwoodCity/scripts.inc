@@ -6,7 +6,6 @@ CianwoodCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CianwoodCity_EventScript_CityEnter
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, CianwoodCity_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, CianwoodCity_EventScript_InitializeSuicune
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
 CianwoodCity_RemoveEusine::
@@ -19,7 +18,6 @@ CianwoodCity_OnFrame::
 
 CianwoodCity_EventScript_CityEnter::
 	setflag FLAG_VISITED_CIANWOOD_CITY
-	callnative SetTimeBasedEncounters
 	goto_if_ge VAR_OLIVINE_CITY_STATE, 5, OlivineCity_MapScript_ClearWeather
 	end
 
@@ -43,6 +41,7 @@ CianwoodCity_EventScript_Flytrigger::
 	waitmovement 0
 	msgbox CianwoodCity_Text_ChucksWifeGiveHM, MSGBOX_DEFAULT
 	giveitem ITEM_HM_FLY
+	setflag FLAG_RECEIVED_HM_FLY
 	msgbox CianwoodCity_Text_ChucksWifeFlySpeech, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_GETFLY, 2
@@ -79,6 +78,7 @@ CianwoodCity_EventScript_ChucksWife::
 CianwoodCity_EventScript_ChucksWifeGiveFly::
 	msgbox CianwoodCity_Text_ChucksWifeGiveHM, MSGBOX_DEFAULT
 	giveitem ITEM_HM_FLY
+	setflag FLAG_RECEIVED_HM_FLY
 	msgbox CianwoodCity_Text_ChucksWifeFlySpeech, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -168,7 +168,7 @@ CianwoodCity_EventScript_SuicuneTrigger::
 	waitmovement 0
 	waitmoncry
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	delay 60
 	applymovement LOCALID_CIANWOOD_SUICUNE, CianwoodCity_Movement_Suicune2
 	playse SE_LEDGE
@@ -178,7 +178,7 @@ CianwoodCity_EventScript_SuicuneTrigger::
 	playse SE_LEDGE
 	delay 30
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	waitmoncry
 	applymovement LOCALID_CIANWOOD_SUICUNE, CianwoodCity_Movement_Suicune3

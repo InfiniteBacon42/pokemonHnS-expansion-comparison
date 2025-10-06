@@ -21,7 +21,7 @@ FuchsiaCity_SafariZoneEntrance_FirstTime::
 
 FuchsiaCity_SafariZoneEntrance_EventScript_ExitSafari::
 	lock
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	msgbox SafariZone_Text_WouldYouLikeToExit, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, FuchsiaCity_SafariZoneEntrance_EventScript_ReenterSafari
 	clearflag FLAG_IN_KANTO_SAFARI_ZONE
@@ -30,14 +30,14 @@ FuchsiaCity_SafariZoneEntrance_EventScript_ExitSafari::
 	setflag FLAG_GOOD_LUCK_SAFARI_ZONE
 	msgbox SafariZone_South_Text_ExitEarlyThankYouForPlaying
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, FuchsiaCity_SafariZoneEntrance_Movement_ExitSafariZone
+	applymovement LOCALID_PLAYER, FuchsiaCity_SafariZoneEntrance_Movement_ExitSafariZone
 	waitmovement 0
 	release
 	end
  
 FuchsiaCity_SafariZoneEntrance_EventScript_ReenterSafari::
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_BEACH, 0
 	waitstate
@@ -49,7 +49,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_MeetSteven::
 	applymovement LOCALID_SAFARIZONEFUCHSIA_STEVEN, Common_Movement_ExclamationMark
 	delay 60
 	applymovement LOCALID_SAFARIZONEFUCHSIA_STEVEN, FuchsiaCity_SafariZoneEntrance_Movement_WalkToPlayer
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement LOCALID_SAFARIZONEFUCHSIA_STEVEN
 
 	msgbox FuchsiaCity_SafariZoneEntrance_Text_StevenWelcome, MSGBOX_DEFAULT
@@ -105,7 +105,7 @@ FuchsiaCity_SafariZoneEntrance_Text_StevenChamp:
 
 FuchsiaCity_SafariZoneEntrance_EventScript_EntranceCounterTrigger::
 	lockall
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	showmoneybox 0, 0
 	msgbox Route121_SafariZoneGate_SafariZoneEntrance_Text_WouldYouLikeToPlay, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, FuchsiaCity_SafariZoneEntrance_EventScript_TryEnterSafariZone
@@ -133,7 +133,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	call_if_eq VAR_TEMP_0, 4, FuchsiaCity_SafariZoneEntrance_EventScript_CorrectionLeft
 	call_if_eq VAR_TEMP_0, 6, FuchsiaCity_SafariZoneEntrance_EventScript_CorrectionRight
-	applymovement OBJ_EVENT_ID_PLAYER, FuchsiaCity_SafariZoneEntrance_Movement_EnterSafariZone
+	applymovement LOCALID_PLAYER, FuchsiaCity_SafariZoneEntrance_Movement_EnterSafariZone
 	waitmovement 0
 	setflag FLAG_IN_KANTO_SAFARI_ZONE
 	special EnterSafariMode
@@ -144,12 +144,12 @@ FuchsiaCity_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	end
 
 FuchsiaCity_SafariZoneEntrance_EventScript_CorrectionRight::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	return
 
 FuchsiaCity_SafariZoneEntrance_EventScript_CorrectionLeft::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	return
 
@@ -178,7 +178,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_NotEnoughMoney::
 FuchsiaCity_SafariZoneEntrance_EventScript_MovePlayerBackFromCounter::
 	closemessage
 	hidemoneybox
-	applymovement OBJ_EVENT_ID_PLAYER, FuchsiaCity_SafariZoneEntrance_Movement_BackAwayFromCounter
+	applymovement LOCALID_PLAYER, FuchsiaCity_SafariZoneEntrance_Movement_BackAwayFromCounter
 	waitmovement 0
 	releaseall
 	end

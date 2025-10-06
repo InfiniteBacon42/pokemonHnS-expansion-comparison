@@ -470,9 +470,7 @@
     "RuinsOfAlph_WordsRoom4",
     "Route19_Cave"
   ],
-  "gMapGroup_IndoorDynamic": [
-
-  ],
+  "gMapGroup_IndoorDynamic": [],
   "gMapGroup_SpecialArea": [
     "SSAqua_1F",
     "SSAqua_B1F",

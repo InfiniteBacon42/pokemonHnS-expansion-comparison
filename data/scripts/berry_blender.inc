@@ -242,9 +242,10 @@ BerryBlender_Text_DontHaveAnyBerriesNoneToSpare:
 	.string "But, I don't have any to spare today.\n"
 	.string "Sorry about that.$"
 
+@ HnS PORT TODO - re-enable BlendMaster codepath
 BerryBlender_EventScript_BerryBlender1::
 	lockall
-	goto_if_unset FLAG_GARBAGEFLAG, BerryBlender_EventScript_BlendMasterPresent
+	@ goto_if_unset FLAG_GARBAGEFLAG, BerryBlender_EventScript_BlendMasterPresent
 	setvar NUM_OPPONENTS, 1
 	applymovement LOCALID_EXPERT_M, BerryBlender_Movement_BlendLeaderWalkInPlace
 	waitmovement 0

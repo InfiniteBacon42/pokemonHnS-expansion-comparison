@@ -1,5 +1,3 @@
-.set LOCALID_FOSSIL_SCIENTIST, 3
-
 RustboroCity_DevonCorp_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_DevonCorp_2F_OnTransition
 	.byte 0
@@ -558,7 +556,6 @@ RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAero::
 	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
 	release
 	end
-
 
 RustboroCity_DevonCorp_2F_EventScript_ChooseFossil::
 	message RustboroCity_DevonCorp_2F_Text_TwoFossilsPickOne

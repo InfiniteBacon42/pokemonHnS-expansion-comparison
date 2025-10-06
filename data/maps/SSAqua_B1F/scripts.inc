@@ -6,10 +6,10 @@ SSAqua_B1F_MapScripts::
 SSAqua_B1F_EventScript_Trigger::
 	lock
 	turnobject LOCALID_SSAQUA_B1F_SAILORLOOKING, DIR_EAST
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	msgbox SSAqua_B1F_Text_FastShipOnDutySailor, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0 
 	turnobject LOCALID_SSAQUA_B1F_SAILORLOOKING, DIR_SOUTH
 	release

@@ -56,14 +56,14 @@ NewBarkTown_PlayersHouse_1F_EventScript_Mom_Regular::
 
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntroTrigger1::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement1
+	applymovement LOCALID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement1
 	waitmovement 0
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntroTrigger2::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement2
+	applymovement LOCALID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement2
 	waitmovement 0
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro
 	end

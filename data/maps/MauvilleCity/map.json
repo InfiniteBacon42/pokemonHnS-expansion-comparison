@@ -106,6 +106,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAUVILLE_SILVER",
       "graphics_id": "OBJ_EVENT_GFX_SILVER",
       "x": 8,
       "y": 6,
@@ -153,8 +154,8 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MauvilleCity_EventScript_ItemXSpeed",
+      "trainer_sight_or_berry_tree_id": "ITEM_X_SPEED",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
@@ -171,6 +172,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAUVILLE_OAK",
       "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
       "x": 12,
       "y": 14,
@@ -287,9 +289,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

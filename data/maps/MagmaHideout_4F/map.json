@@ -12,10 +12,11 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GROUDON",
+      "local_id": "LOCALID_MAGMA_HIDEOUT_4F_GROUDON",
+      "graphics_id": "OBJ_EVENT_GFX_GROUDON_FRONT",
       "x": 16,
       "y": 17,
       "elevation": 0,
@@ -28,6 +29,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_MAGMA_HIDEOUT_4F_GRUNT_1",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
       "x": 31,
       "y": 22,
@@ -41,6 +43,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_MAGMA_HIDEOUT_4F_GRUNT_2",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
       "x": 30,
       "y": 13,
@@ -54,6 +57,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_MAGMA_HIDEOUT_4F_GRUNT_3",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
       "x": 26,
       "y": 13,
@@ -67,6 +71,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_MAGMA_HIDEOUT_4F_TABITHA",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
       "x": 22,
       "y": 4,
@@ -80,6 +85,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_MAGMA_HIDEOUT_4F_MAXIE",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER",
       "x": 16,
       "y": 21,
@@ -93,7 +99,8 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GROUDON",
+      "local_id": "LOCALID_MAGMA_HIDEOUT_4F_GROUDON_SLEEPING",
+      "graphics_id": "OBJ_EVENT_GFX_GROUDON_ASLEEP",
       "x": 16,
       "y": 17,
       "elevation": 3,
@@ -114,8 +121,8 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MagmaHideout_4F_EventScript_ItemMaxRevive",
+      "trainer_sight_or_berry_tree_id": "ITEM_MAX_REVIVE",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE"
     }
   ],
@@ -135,10 +142,6 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

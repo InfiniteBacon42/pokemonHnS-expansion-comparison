@@ -48,7 +48,7 @@ TinTower_RoofDay_EventScript_TalkToKimono::
 
 	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Step_Aside
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, TinTower_RoofDay_Walk_To_Center
+	applymovement LOCALID_PLAYER, TinTower_RoofDay_Walk_To_Center
 	waitmovement 0
 	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Step_In
 	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Step_Start_Left

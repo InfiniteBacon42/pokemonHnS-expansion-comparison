@@ -94,7 +94,7 @@ GoldenrodCity_Gym_EventScript_WhitneyDefeated::
 GoldenrodCity_Gym_EventScript_Trigger::	
 	turnobject LOCALID_GOLDENROD_CITY_GYM_BRIDGET DIR_WEST
 	msgbox GoldenrodCity_Gym_Text_BridgetWhitneyCries, MSGBOX_DEFAULT
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	setvar VAR_GOLDENROD_CITY_STATE, 4
 	closemessage

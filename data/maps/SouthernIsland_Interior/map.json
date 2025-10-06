@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
@@ -28,6 +28,7 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "local_id": "LOCALID_SOUTHERN_ISLAND_LATI",
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
       "x": 13,
       "y": 0,
@@ -41,7 +42,8 @@
       "flag": "FLAG_GARBAGEFLAG"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LATIOS",
+      "local_id": "LOCALID_SOUTHERN_ISLAND_LATIOS",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LATIOS)",
       "x": 15,
       "y": 14,
       "elevation": 0,
@@ -54,7 +56,8 @@
       "flag": "FLAG_HIDE_LATIOS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LATIAS",
+      "local_id": "LOCALID_SOUTHERN_ISLAND_LATIAS",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LATIAS)",
       "x": 12,
       "y": 13,
       "elevation": 0,
@@ -83,9 +86,7 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

@@ -108,7 +108,7 @@ Route25_Trigger_MistyRight::
 	waitmovement 0
 	applymovement2 LOCALID_ROUTE25_MISTY, Route25_Movement_MistyWalkToPlayerRight
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	goto Route25_EventScript_Misty
 Route25_Trigger_MistyLeft::
 	lock
@@ -122,7 +122,7 @@ Route25_Trigger_MistyLeft::
 	waitmovement 0
 	applymovement2 LOCALID_ROUTE25_MISTY, Route25_Movement_MistyWalkToPlayerLeft
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	goto Route25_EventScript_Misty
 Route25_EventScript_Misty::
 	msgbox Route25_Text_MistyDate, MSGBOX_DEFAULT
@@ -141,29 +141,29 @@ Route25_EventScript_Misty::
 Route25_Trigger_SuicuneLeft::
 	lock
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	delay 60
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	applymovement LOCALID_ROUTE25_SUICUNE, Route25_Movement_Suicune1
 	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route25_Movement_WalkToSuicune
+	applymovement LOCALID_PLAYER, Route25_Movement_WalkToSuicune
 	waitmovement 0
 	goto Route25_EventScript_SuicuneMerge
 Route25_Trigger_SuicuneRight::
 	lock
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	delay 60
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	applymovement LOCALID_ROUTE25_SUICUNE, Route25_Movement_Suicune1
 	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route25_Movement_WalkToSuicune
+	applymovement LOCALID_PLAYER, Route25_Movement_WalkToSuicune
 	waitmovement 0
 	goto Route25_EventScript_SuicuneMerge
 Route25_EventScript_SuicuneMerge::
@@ -171,12 +171,12 @@ Route25_EventScript_SuicuneMerge::
 	addobject LOCALID_ROUTE25_EUSINE
 	applymovement LOCALID_ROUTE25_EUSINE, Route25_Movement_EusineEnter
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	msgbox Route25_Text_Eusine1, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROUTE25_EUSINE, Route25_Movement_EusineSide
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	msgbox Route25_Text_Eusine2, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_SUICUNE_ENCOUNTERS, 7
@@ -237,7 +237,7 @@ Route25_EventScript_Suicune::
 	goto_if_ge VAR_SUICUNE_ENCOUNTERS, 8, Route25_EventScript_SuicunePostGame
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	call_if_eq VAR_TEMP_0, 66, Route25_AdjustPlayer
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	turnobject LOCALID_ROUTE25_EUSINE, DIR_NORTH
 	msgbox Route25_Text_Eusine3, MSGBOX_DEFAULT
 	closemessage
@@ -255,7 +255,7 @@ Route25_EventScript_SuicuneRan::
 	end
 
 Route25_AdjustPlayer::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	return
 

@@ -117,7 +117,7 @@ AquaHideout_UnusedRubyMap1_EventScript_RanFromRegidrago::
 
 AquaHideout_UnusedRubyMap1_EventScript_DusknoirButton::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, AquaHideout_UnusedRubyMap1_Movement
+	applymovement LOCALID_PLAYER, AquaHideout_UnusedRubyMap1_Movement
 	waitmovement 0
 	goto_if_set FLAG_DEFEATED_DUSKNOIR, AquaHideout_UnusedRubyMap1_EventScript_DusknoirButtonFinished
 	msgbox AquaHideout_UnusedRubyMap1_EventScript_DusknoirButtonText, MSGBOX_YESNO

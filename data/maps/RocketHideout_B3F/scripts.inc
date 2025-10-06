@@ -39,7 +39,7 @@ RocketHideout_B3F_EventScript_LancePassword::
 	playse SE_PIN
 	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, Common_Movement_ExclamationMark
 	delay 20
-	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, Common_Movement_WalkRight1
+	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, Common_Movement_WalkRight
 	msgbox RocketHideout_B3F_Text_LanceGetPassword, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, RocketHideout_B3F_Movement_LanceLeave
@@ -156,7 +156,7 @@ RocketHideout_B3F_Trigger_Silver::
 	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
 	applymovement LOCALID_ROCKETHIDEOUT3_SILVER, RocketHideout_B3F_Movement_SilverEnter
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	msgbox RocketHideout_B3F_Text_Rival, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROCKETHIDEOUT3_SILVER, RocketHideout_B3F_Movement_SilverLeave
@@ -344,7 +344,7 @@ RocketHideout_B3F_EventScript_Giovanni::
 	call_if_eq VAR_FACING, DIR_EAST, RocketHideout_B3F_EventScript_FacingEastMurkrow
 	call_if_eq VAR_FACING, DIR_WEST, RocketHideout_B3F_EventScript_FacingWestMurkrow
 
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	waitmovement LOCALID_ROCKETHIDEOUT3_MURKROW
 	playmoncry SPECIES_MURKROW, CRY_MODE_NORMAL
 	msgbox RocketHideout_B3F_Text_MurkrowSpeak1, MSGBOX_DEFAULT
@@ -366,17 +366,17 @@ RocketHideout_B3F_EventScript_Giovanni::
 	end
 
 RocketHideout_B3F_EventScript_FacingEastMurkrow::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
-	waitmovement OBJ_EVENT_ID_PLAYER
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown1
-	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
+	waitmovement LOCALID_PLAYER
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
+	waitmovement LOCALID_PLAYER
 	return
 
 RocketHideout_B3F_EventScript_FacingWestMurkrow::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
-	waitmovement OBJ_EVENT_ID_PLAYER
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown1
-	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	waitmovement LOCALID_PLAYER
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
+	waitmovement LOCALID_PLAYER
 	return
 
 RocketHideout_B3F_EventScript_FacingEast::

@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MISTY",
@@ -93,7 +93,7 @@
       "flag": "FLAG_HIDE_CERULEAN_GYM_TRAINERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHINCHOU",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHINCHOU)",
       "x": 4,
       "y": 12,
       "elevation": 0,
@@ -106,7 +106,7 @@
       "flag": "FLAG_HIDE_CERULEAN_GYM_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_STARYU",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(STARYU)",
       "x": 9,
       "y": 13,
       "elevation": 0,
@@ -119,7 +119,7 @@
       "flag": "FLAG_HIDE_CERULEAN_GYM_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CORSOLA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CORSOLA)",
       "x": 5,
       "y": 8,
       "elevation": 0,
@@ -154,9 +154,7 @@
       "dest_warp_id": "5"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

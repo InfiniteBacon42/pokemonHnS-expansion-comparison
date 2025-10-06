@@ -1,6 +1,3 @@
-.set LOCALID_NURSE, 1
-.set LOCALID_FOLLOWER, 0xFE
-
 OldaleTown_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
@@ -13,7 +10,7 @@ OldaleTown_PokemonCenter_1F_OnTransition:
 
 OldaleTown_PokemonCenter_1F_EventScript_Nurse::
 	applymovement LOCALID_FOLLOWER, Common_Movement_Enter_Pokeball
-	setvar VAR_0x800B, LOCALID_NURSE
+	setvar VAR_0x800B, LOCALID_OLDALE_NURSE
 	call Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress

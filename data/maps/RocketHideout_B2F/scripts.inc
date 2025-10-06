@@ -186,11 +186,11 @@ RocketHideout_B2F_Text_MurkrowUnlock:
 @============================================================================================================================================
 
 RocketHideout_B2F_Trigger_PlayerMoveLeft::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	return
 RocketHideout_B2F_Trigger_PlayerMoveRight::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	return
 
@@ -204,12 +204,12 @@ RocketHideout_B2F_Trigger_Ariana::
 	delay 20
 	msgbox RocketHideout_B2F_Text_ArianaHoldIt, MSGBOX_AUTOCLOSE
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	delay 60
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	call_if_eq VAR_TEMP_0, 14, RocketHideout_B2F_Trigger_PlayerMoveLeft
 	call_if_eq VAR_TEMP_0, 16, 	RocketHideout_B2F_Trigger_PlayerMoveRight
-	applymovement OBJ_EVENT_ID_PLAYER, RocketHideout_B2F_Movement_PlayerMeetAriana
+	applymovement LOCALID_PLAYER, RocketHideout_B2F_Movement_PlayerMeetAriana
 	applymovement LOCALID_ROCKETHIDEOUT2_ARIANA, RocketHideout_B2F_Movement_Ariana
 	delay 20
 	applymovement LOCALID_ROCKETHIDEOUT2_GRUNT, RocketHideout_B2F_Movement_Ariana
@@ -314,8 +314,8 @@ RocketHideout_B2F_EventScript_DoLanceMultiBattle::
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
 	setvar VAR_0x8004, SPECIAL_BATTLE_LANCE
 	setvar VAR_0x8005, 0
-	applymovement LOCALID_ROCKETHIDEOUT2_ARIANA, Common_Movement_WalkUp1
-	applymovement LOCALID_ROCKETHIDEOUT2_GRUNT, Common_Movement_WalkUp1
+	applymovement LOCALID_ROCKETHIDEOUT2_ARIANA, Common_Movement_WalkUp
+	applymovement LOCALID_ROCKETHIDEOUT2_GRUNT, Common_Movement_WalkUp
 	waitmovement 0
 	turnobject LOCALID_ROCKETHIDEOUT2_GRUNT, DIR_WEST
 	special DoSpecialTrainerBattle
@@ -343,24 +343,24 @@ RocketHideout_B2F_EventScript_DefeatedAriana::
 	msgbox RocketHideout_Text_ArianaRetreat, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
-	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, Common_Movement_WalkUp1
-	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, Common_Movement_WalkUp1
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, Common_Movement_WalkUp
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, Common_Movement_WalkRight1
-	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, Common_Movement_WalkRight1
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, Common_Movement_WalkRight
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, Common_Movement_WalkRight
 	waitmovement 0
 	setflag FLAG_HIDE_MAHOGANY_ROCKETS
 	setflag FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT
 	removeobject LOCALID_ROCKETHIDEOUT2_ARIANA
 	removeobject LOCALID_ROCKETHIDEOUT2_GRUNT
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox RocketHideout_Text_LanceStepBack, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceWalkToGenerator
 	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_DragoniteWalkToGenerator
 	delay 55
-	applymovement OBJ_EVENT_ID_PLAYER, RocketHideout_B2F_Movement_LanceWalkToGenerator
+	applymovement LOCALID_PLAYER, RocketHideout_B2F_Movement_LanceWalkToGenerator
 	waitmovement 0
 
 	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_DragoniteInvestigateGenerator
@@ -375,7 +375,7 @@ RocketHideout_B2F_EventScript_DefeatedAriana::
 	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_LanceWalkToElectrode
 	waitmovement LOCALID_ROCKETHIDEOUT2_DRAGONITE
 	waitmovement LOCALID_ROCKETHIDEOUT2_LANCE
-	applymovement OBJ_EVENT_ID_PLAYER, RocketHideout_B2F_Movement_PlayerWalkToElectrode
+	applymovement LOCALID_PLAYER, RocketHideout_B2F_Movement_PlayerWalkToElectrode
 	waitmovement 0
 	setobjectxyperm LOCALID_ROCKETHIDEOUT2_DRAGONITE, 20, 16
 	setobjectxyperm LOCALID_ROCKETHIDEOUT2_LANCE, 19, 16
@@ -469,7 +469,7 @@ RocketHideout_B2F_Trigger_Electrode::
 	msgbox RocketHideout_B2F_Text_LanceSide, MSGBOX_DEFAULT
 	closemessage
 	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_NORTH
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	release
 	end
@@ -502,22 +502,23 @@ RocketHideout_B2F_EventScript_ElectrodeDone::
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1 
 	call_if_eq VAR_TEMP_1, 16, RocketHideout_B2F_Movement_PlayerMeetLanceTop
 	call_if_eq VAR_TEMP_1, 18, RocketHideout_B2F_Movement_PlayerMeetLanceBot
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceMeetPlayerAfterElectrode
 	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_LanceMeetPlayerAfterElectrode
 	waitmovement LOCALID_ROCKETHIDEOUT2_DRAGONITE
 
 	playse SE_CLICK
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_NORTH
 	call RockerHideout2_DeactivateGenerator
 	special DrawWholeMapView
 	delay 55
 	turnobject LOCALID_ROCKETHIDEOUT2_LANCE DIR_WEST
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	delay 30
 	msgbox RocketHideout_B2F_Text_LanceElectrodeDone, MSGBOX_DEFAULT
 	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_WHIRLPOOL
 	msgbox RocketHideout_B2F_Text_LanceWhirlpool, MSGBOX_DEFAULT
 	closemessage
 	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_SOUTH
@@ -542,12 +543,12 @@ RocketHideout_B2F_EventScript_ElectrodeDone::
 	end
 
 RocketHideout_B2F_Movement_PlayerMeetLanceTop:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	return
 
 RocketHideout_B2F_Movement_PlayerMeetLanceBot:
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	return
 
@@ -695,21 +696,21 @@ RocketHideout_EventScript_Item_Thief::
 
 RocketHideout_B2F_EventScript_LanceTriggerLeft::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	goto RocketHideout_B2F_EventScript_Lance
 
 RocketHideout_B2F_EventScript_LanceTriggerRight::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	goto RocketHideout_B2F_EventScript_Lance
 
 RocketHideout_B2F_EventScript_Lance::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	msgbox RocketHideout_B2F_Text_LanceHeals1, MSGBOX_DEFAULT
 	closemessage

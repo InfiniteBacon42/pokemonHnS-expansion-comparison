@@ -2,8 +2,8 @@
 .set LOCALID_INDIGOPLATEAU_ABRA, 6
 
 IndigoPlateau_PokemonCenter_MapScripts::
-	@map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, IndigoPlateau_PokemonCenter_OnFrame 
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, IndigoPlateau_PokemonCenter_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
 IndigoPlateau_PokemonCenter_OnFrame::
@@ -116,7 +116,7 @@ IndigoPlateau_EventScript_Psychic::
 IndigoPlateau_EventScript_PsychicTeleport::
 	msgbox IndigoPlateau_Text_TeleportGuyYes, MSGBOX_DEFAULT
 	closemessage
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	playbgm MUS_HG_NEW_BARK, TRUE
 	delay 60
 	playmoncry SPECIES_ABRA, CRY_MODE_NORMAL
