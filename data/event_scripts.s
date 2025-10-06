@@ -595,7 +595,9 @@ gStdScripts_End::
 @ HnS PORT TODO - Disabled Briney Scripts for port, re-add them alongside functional maps
 EventScript_WhiteOut::
 	call HallOfFame_EventScript_ResetEliteFour
-	@ goto EventScript_ResetMrBriney
+	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_SHINY
+	goto EventScript_ResetMrBriney
 	end
 
 @ HnS PORT TODO - Disabled Briney Scripts
