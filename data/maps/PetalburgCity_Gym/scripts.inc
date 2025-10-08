@@ -1,7 +1,3 @@
-.set LOCALID_PETALBURG_GYM_NORMAN, 1
-.set LOCALID_PETALBURG_GYM_WALLY, 10
-.set LOCALID_PETALBURG_GYM_WALLYS_DAD, 11
-
 PetalburgCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_Gym_OnTransition

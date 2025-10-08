@@ -1,5 +1,3 @@
-.set LOCALID_METEOR_FALLS_STEVEN, 1
-
 MeteorFalls_StevensCave_MapScripts::
 	.byte 0
 

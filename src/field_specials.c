@@ -4691,7 +4691,7 @@ void SetSpDefStat(void)
     SetMonData(&gEnemyParty[0], MON_DATA_SPDEF, &SpDefStat);
 }
 
-//HnS haircut
+// HnS haircut
 void HaircutBrother1(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_HAIRCUT1);
@@ -4801,6 +4801,7 @@ void SetVermilionTrashCans(void)
             gSpecialVar_0x8005 = gSpecialVar_0x8004 + 1;
     }
 }
+
 void SwitchMonAbility(void)
 {
     u16 species = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, NULL);

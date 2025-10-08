@@ -1233,7 +1233,7 @@
     },
     {
       "id": "LAYOUT_ROUTE121_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE",
-      "name": "Route121_SafariZoneGate_SafariZoneGate_SafariZoneEntrance_Layout",
+      "name": "Route121_SafariZoneGate_SafariZoneEntrance_Layout",
       "width": 18,
       "height": 14,
       "primary_tileset": "gTileset_Building",
@@ -8073,7 +8073,7 @@
     },
     {
       "id": "LAYOUT_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE",
-      "name": "SafariZoneGate_SafariZoneGate_SafariZoneEntrance_Layout",
+      "name": "SafariZoneGate_SafariZoneEntrance_Layout",
       "width": 19,
       "height": 15,
       "primary_tileset": "gTileset_Johto_Building",
@@ -8373,7 +8373,7 @@
     },
     {
       "id": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE",
-      "name": "FuchsiaCity_SafariZoneGate_SafariZoneGate_SafariZoneEntrance_Layout",
+      "name": "FuchsiaCity_SafariZoneEntrance_Layout",
       "width": 15,
       "height": 15,
       "primary_tileset": "gTileset_Kanto_Building",

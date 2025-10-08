@@ -1,3 +1,4 @@
+.set LOCALID_WOMAN, 8
 .set LOCALID_JIRACHI, 18
 
 MossdeepCity_MapScripts::
